@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "ASOS Discount Calculator",
+    "version": "1.0",
+    "description": "Displays item prices after applying a discount percentage.",
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.asos.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
