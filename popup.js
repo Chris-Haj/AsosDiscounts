@@ -25,6 +25,13 @@ document.getElementById("saveBtn").addEventListener("click", () => {
   });
 });
 
+// Allow pressing Enter to apply discount
+document.getElementById("discountInput").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    document.getElementById("saveBtn").click();
+  }
+});
+
 // Clear discount and reset prices
 document.getElementById("clearBtn").addEventListener("click", () => {
   chrome.storage.sync.remove("discount", () => {
