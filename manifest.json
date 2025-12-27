@@ -8,6 +8,12 @@
         "scripting",
         "activeTab"
     ],
+    "host_permissions": [
+        "https://api.currencyfreaks.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "popup.html"
     },
